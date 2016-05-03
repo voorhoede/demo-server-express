@@ -51,8 +51,7 @@ After installing dependencies using `npm install` the following scripts are avai
 `npm run ...` | Description
 ---|---
 `start` | Alias for `start:dev`.
-`start:dev` | Starts a development server on `http://localhost:9777` ("xprs" in T9)
-              and `http://localhost:9778` with live reload and synced interaction.
+`start:dev` | Starts a development server on `http://localhost:9777` ("xprs" in T9) and `http://localhost:9778` with live reload and synced interaction.
 `start:prod` | Starts a production server on `http://localhost:9777`.
 
 ### Development server
