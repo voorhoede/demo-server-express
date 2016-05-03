@@ -1,0 +1,19 @@
+{% if env == 'development' %}
+<button data-demo-linker-toggle>annotate</button>
+<style>
+    [data-demo-linker-toggle]{
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        padding: 5px;
+        line-height: 1;
+        color: white;
+        background: mediumvioletred;
+        border: none;
+    }
+</style>
+
+<link rel="stylesheet" href="/demo/linker.css">
+<script src="/demo/linker.js"></script>
+<script>window.demoLinker('/demo/mapping.json', { 'baseUrl': '/demo/#/demo/modules/' });</script>
+{% endif %}

@@ -1,0 +1,13 @@
+{% macro comment(heading, body) %}
+    <div class="media">
+        <span class="media-left">
+            <img class="media-object" alt="Random person"
+                 src="https://randomuser.me/api/portraits/{{ ['men', 'women'] | random }}/{{ randomInt(0, 99) }}.jpg"
+                 width="60" height="60">
+        </span>
+        <div class="media-body">
+            <h3 class="media-heading">{{ heading }}</h3>
+            {{ body }}
+        </div>
+    </div>
+{% endmacro %}

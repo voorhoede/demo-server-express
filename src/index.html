@@ -1,0 +1,16 @@
+{% extends "core/template/template.html" %}
+
+{% block content %}
+
+    {% include "core/app-header/app-header.html" %}
+
+    <div class="container">content</div>
+
+    {% include "core/app-footer/app-footer.html" %}
+
+    {% block foot %}
+        {{ super() }}
+        {% include "demo/linker/linker.html" %}
+    {% endblock %}
+
+{% endblock %}

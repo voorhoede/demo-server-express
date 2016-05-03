@@ -1,0 +1,23 @@
+{% extends "core/template/template.html" %}
+{% from "./comment/comment.html" import comment as commentMacro %}
+
+{% block content %}
+
+    <main class="container">
+
+    <article>
+        <h1>{{ post.title }}</h1>
+
+        {{ post.body | safe }}
+    </article>
+
+    <section>
+        <h2>Comments</h2>
+        {% for comment in post.comments %}
+            {{ commentMacro(heading = comment.name, body = comment.body) }}
+        {% endfor %}
+    </section>
+
+    </main>
+
+{% endblock %}
