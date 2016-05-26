@@ -5,13 +5,6 @@ const renderer = require('../../lib/renderer');
 
 const router = express.Router();
 
-//router.get('/', function(req, res) {
-//    res.write('<html><body>just be quick');
-//    getPosts()
-//        .then(data => res.end(JSON.stringify(data)) )
-//        .catch(err => console.error(err));
-//});
-
 router.get('/', (req, res) => getPosts(req.query)
     .catch(err => console.error(err))
     .then(data => res.end(renderer.render('blog/index.html', data)))

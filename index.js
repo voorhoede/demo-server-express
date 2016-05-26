@@ -9,6 +9,7 @@ const port = 9777; // "xprs" in T9
 app.get('/', (req, res) => res.send(renderer.render('index.html')));
 app.use('/assets', express.static('src/assets'));
 app.use('/blog/', require('./src/blog/router'));
+app.use('/gallery/', require('./src/gallery/router'));
 
 if(isDevelopment) {
     app.use('/demo/', require('./src/demo/router'));
