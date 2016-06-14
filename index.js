@@ -3,7 +3,7 @@ const renderer = require('./lib/renderer');
 
 const app = express();
 const isDevelopment = ('development' === process.env.NODE_ENV);
-const port = 9777; // "xprs" in T9
+const port = process.env.PORT || 9777; // 9777 is "xprs" in T9
 
 app.get('/', (req, res) => res.send(renderer.render('index.html')));
 app.use('/assets', express.static('src/assets'));
