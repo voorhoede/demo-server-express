@@ -1,4 +1,3 @@
-const browserSync = require('browser-sync');
 const express = require('express');
 const renderer = require('./lib/renderer');
 
@@ -21,6 +20,7 @@ function listening () {
     console.log('Demo server available on http://localhost:' + port);
     if(isDevelopment) {
         // https://ponyfoo.com/articles/a-browsersync-primer#inside-a-node-application
+        const browserSync = require('browser-sync');
         browserSync({
             files: ['src/**/*.{html,js,css}'],
             online: false,
