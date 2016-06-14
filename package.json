@@ -19,8 +19,12 @@
     "url": "https://github.com/jbmoelker/demo-server-express/issues"
   },
   "homepage": "https://github.com/jbmoelker/demo-server-express#readme",
+  "engines": {
+    "node": "5.8.0"
+  },
   "dependencies": {
     "bluebird": "3.3.5",
+    "cross-env": "1.0.7",
     "express": "4.13.4",
     "glob": "7.0.3",
     "nunjucks": "2.4.2",
@@ -29,7 +33,6 @@
   },
   "devDependencies": {
     "browser-sync": "2.12.5",
-    "cross-env": "1.0.7",
     "marked": "0.3.5",
     "nodemon": "1.9.2",
     "prismjs": "1.4.1"
